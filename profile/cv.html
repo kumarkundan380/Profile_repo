@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Resume </title>
+        <meta-charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="cv2.css">
+        <script>
+            function setValue()
+            {
+               fname=localStorage.getItem('first_name');
+               lName=localStorage.getItem('last_name');
+            
+                document.getElementById('name').innerHTML=fname+" "+ lName;
+                document.getElementById('degination').innerHTML=localStorage.getItem('designation');
+                document.getElementById('pgcollege').innerHTML=localStorage.getItem('pgboard');
+                document.getElementById('bsccollege').innerHTML=localStorage.getItem('bscboard');
+                document.getElementById('intercollege').innerHTML=localStorage.getItem('hscboard');
+                document.getElementById('matriccollege').innerHTML=localStorage.getItem('sscboard');
+                document.getElementById('email').innerHTML=localStorage.getItem('email');
+                document.getElementById('mobile').innerHTML=localStorage.getItem('mobile');
+                skills=localStorage.getItem('skills');
+                document.getElementById('s1').innerHTML=skills;
+                return false;
+            }  
+            function readURL(input)
+            {
+                if(input.files&&input.files[0]){
+                var reader=new FileReader();
+                reader.onload=function(e){
+                    $('#image')
+                    .attr('src',e.target.result);
+                    // var image = new Image();
+                    localStorage.profile=e.target.result;
+                    document.getElementById("img").src=image.src = e.target.result;
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+            
+        </script>
+    </head>
+    <body>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-mg-4 col-sm-4 col-12">
+                    <img id="image" src="" onchange="readURL(this);" class="rounded-circle" alt="Profile" width="150" height="150">
+                </div>
+                <div class="col-lg-4 col-mg-4 col-sm-4 col-12">
+                    <h3 id="name"></h3>
+                    <hr id="horizontal">
+                    <h4 id="degination"></h4>
+                </div>
+                <div class="col-lg-4 col-mg-4 col-sm-4 col-12" id="left">
+                    <p style="margin-left: 15px;"></p>
+                    <p style="margin-left: 15px;"></p>
+                    <p id='email' style="margin-left: 15px;"></p>
+                    <p id='mobile' style="margin-left: 15px;"></p>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-12">
+                    <h3 style="background: powderblue;">EXPERIENCE</h3>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-lg-6 col-mg-6 col-sm-6 col-12">
+                    <h4>Intern Software Engineer</h4>
+                    <h6>Present</h6>   
+                </div>
+                <div class="col-lg-6 col-mg-6 col-sm-6 col-12">
+                    <h4>Mindfire Solutions</h4>
+                     
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-mg-6 col-sm-6 col-12">
+                    <h4>Development of android app for air quality.</h4>
+                    <h6>DEC 2018-JAN 2019</h6>   
+                </div>
+                <div class="col-lg-6 col-mg-6 col-sm-6 col-12">
+                    <h4>City Probe(NIT Durgapur)</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h3 style="background: powderblue;">EDUCATION</h3>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-lg-6 col-mg-6 col-sm-6 col-12">
+                    <h4>MCA</h4>
+                    <h6>Pursuing</h6>   
+                </div>
+                <div class="col-lg-6 col-mg-6 col-sm-6 col-12">
+                    <h4 id='pgcollege'></h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-mg-6 col-sm-6 col-12">
+                    <h4>BCA</h4>
+                    <h6>JUN 2012-DEC 2015</h6>   
+                </div>
+                <div class="col-lg-6 col-mg-6 col-sm-6 col-12">
+                    <h4 id='bsccollege'></h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-mg-6 col-sm-6 col-12">
+                    <h4>Intermediate</h4>
+                    <h6>APR 2010-APR 2012</h6>   
+                </div>
+                <div class="col-lg-6 col-mg-6 col-sm-6 col-12">
+                    <h4 id='intercollege'></h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-mg-6 col-sm-6 col-12">
+                    <h4>Matriculation</h4>
+                    <h6>APR 2009-FEB 2010</h6>   
+                </div>
+                <div class="col-lg-6 col-mg-6 col-sm-6 col-12">
+                    <h4 id='matriccollege'></h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-mg-6 col-sm-6 col-12">
+                    <h3 style="background: powderblue;">SKILLS</h3>
+                </div>
+                <div class="col-lg-6 col-mg-6 col-sm-6 col-12">
+                    <h3 style="background: powderblue;">LANGUAES</h3>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-lg-6 col-mg-6 col-sm-6 col-12">
+                    <ul>
+                        <li id="s1"></li>
+                        <li id="s2"></li>
+                        <li id="s3"></li>
+                        <li id="s4"></li>
+                        <li id="s5"></li>
+                        <li id="s6"></li>
+                        <li id="s7"></li>
+                      </ul> 
+                      <button onclick="setValue()"> Click to Load </button>
+                </div>
+                <div class="col-lg-6 col-mg-6 col-sm-6 col-12">
+                    <ul>
+                        <li id="l1">English</li>
+                        <li id="l2">Hindi</li>
+                    </ul>    
+                </div>
+            </div><br>
+            
+            
+        </div>    
+        
+    </body>
+</html>

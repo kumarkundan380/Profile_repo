@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resume Form</title>
+        <meta-charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="profile5.css">
+    </head>
+    <body>
+        <div class="container"><br>
+            <h1 class="text-center bg-dark text-white">My Profile</h1><br>
+            <form name="form1"  method="GET">
+                <div class="row">
+                    <div class="col-lg-4 col-mg-4 col-sm-4 col-12">
+                        <img src="profile.png" id ="profilepic" class="img-fluid">
+                    </div>
+                    <div class="col-lg-4 col-mg-4 col-sm-4 col-12">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" name="" id="first_name" value="" class="form-control" >
+                            <span id="fname" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>    
+                    <div class="col-lg-4 col-mg-4 col-sm-4 col-12">
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" name="" id="last_name" value="" class="form-control">
+                            <span id="lname" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class ="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                        <input type="file" onchange="readURL(this);" name="" accept=".jpg" id="browse" class="btn " required>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="" id="email" value="" class="form-control">
+                            <span id="email_id" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>   
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                        <div class="form-group">
+                            <label>Designation</label>
+                            <input type="text" name="" id="designation" value="" class="form-control" class="img-fluid">
+                            <span id="design" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                        <div class="form-group">
+                            <label>Country</label>
+                            <select id="country" name="country" class="form-control">
+                                <option value="india">India</option>
+                                <option value="china">China</option>
+                                <option value="japan">Japan</option>
+                                <option value="australia">Australia</option>
+                                <option value="canada">Canada</option>
+                                <option value="russia">Russia</option>
+                                <option value="england">England</option>
+                                <option value="usa">USA</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                        <div class="form-group">
+                            <label>Mobile Number</label>
+                            <input type="text" name="" id="mobile" value="" class="form-control">
+                            <span id="mobileno" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                        <div class="form-group">
+                            <label>Date of Birth</label>
+                            <input type="date" name="" id="dob" value="" class="form-control">
+                            <span id="dateofbirth" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                        <div class="form-group">
+                            <label>Your Skills</label>
+                            <input type="text" name="" id="skills" value="" class="form-control">
+                            <span id="yourskills" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                        <div class="form-group">
+                            <label>Hobbies</label>
+                            <input type="text" name="" id="hobbies" value="" class="form-control">
+                            <span id="hobby" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                        <div class="form-group">
+                            <label style="margin-right: 20px;">Gender</label><br>
+                            <!-- Material inline 1 -->
+                            <div class="form-check form-check-inline">
+                                <input type="radio"class="form-check-input" id="male"name="gender" checked>
+                                <label class="form-check-label" for="male">Male</label>
+                            </div>
+        
+                            <!-- Material inline 2 -->
+                            <div class="form-check form-check-inline">
+                                <input type="radio"class="form-check-input" id="female" name="gender">
+                                <label class="form-check-label" for="female">Female</label>
+                            </div>
+        
+                            <!-- Material inline 3 -->
+                            <div class="form-check form-check-inline">
+                                <input type="radio"class="form-check-input" id="others" name="gender">
+                                <label class="form-check-label" for="others">Others</label>
+                            </div>   
+                        </div> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="text text-dark">Educational Qualifications</h3>
+                        <hr id="horizontal">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <h4>Qualification</h4>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <h4>Board/ University</h4>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <h4>Percentage / Grades</h4>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <h4>Year</h4>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <h5>S.S.C</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <input type="text" name="" id="sscboard" value="" class="form-control" >
+                            <span id="sboard" class="text-danger font-weight-bold"></span>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <input type="text" name="" id="sscper" value="" class="form-control" >
+                            <span id="sper" class="text-danger font-weight-bold"></span>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <input type="text" name="" id="sscyear" value="" class="form-control" >
+                            <span id="syear" class="text-danger font-weight-bold"></span>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <h5>H.S.C(Science Stream)</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <input type="text" name="" id="hscboard" value="" class="form-control" >
+                            <span id="hboard" class="text-danger font-weight-bold"></span>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <input type="text" name="" id="hscper" value="" class="form-control" >
+                            <span id="hper" class="text-danger font-weight-bold"></span>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <input type="text" name="" id="hscyear" value="" class="form-control" >
+                            <span id="hyear" class="text-danger font-weight-bold"></span>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <h5>B.Sc. (Hons)-Computer Science</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <input type="text" name="" id="bscboard" value="" class="form-control" >
+                            <span id="bboard" class="text-danger font-weight-bold"></span>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <input type="text" name="" id="bscper" value="" class="form-control" >
+                            <span id="bper" class="text-danger font-weight-bold"></span>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <input type="text" name="" id="bscyear" value="" class="form-control" >
+                            <span id="byear" class="text-danger font-weight-bold"></span>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <h5>P.G-(Computer Science)</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <input type="text" name="" id="pgboard" value="" class="form-control" >
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <input type="text" name="" id="pgper" value="" class="form-control" >
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <input type="text" name="" id="pgyear" value="" class="form-control" >
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <h5>Other Qualification</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <input type="text" name="" id="otherboard" value="" class="form-control" >
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <input type="text" name="" id="otherper" value="" class="form-control" >
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                        <input type="text" name="" id="otheryear" value="" class="form-control" >
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group purple-border">
+                            <h5>Bio</h5>
+                            <textarea class="form-control" id="bio" rows="3"></textarea>
+                            <span id="comment" class="text-danger font-weight-bold"></span>
+                        </div> 
+                    </div>
+                </div>
+                <input type="reset" name="" class="btn">
+                <input type="button" name="Preview" class="btn" value="Preview" onClick="parent.location='cv.html'">
+                <input type="submit" name="" class="btn" onclick="passValue();">
+            </form>
+        </div>  
+        <script src="script.js"></script>     
+    </body>
+</html>    
